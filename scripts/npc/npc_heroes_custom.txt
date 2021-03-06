@@ -1,0 +1,2831 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//========================================================================================
+	// HARRY POTTER
+	//========================================================================================
+    	"npc_dota_hero_rubick"
+	{
+		"Model"		"models/heroes/rubick/rubick.vmdl"
+		"SoundSet"		"Hero_Rubick"
+		"Enabled"		"1"
+		"Role"			"Disabler,Nuker,Escape"
+		"Rolelevels"	"2,3,3"
+		"Complexity"	"3"
+		"Team"		"Good"
+		"HeroID"		"86"
+		"ModelScale"		"0.700000"
+		"VersusScale"		"0.620000"
+		"LoadoutScale"		"0.650000"
+		"NameAliases"		"rubick"
+		"workshop_guide_name"		"Rubick"
+		"PickSound"		"rubick_rubick_spawn_04"
+		"BanSound"		"rubick_rubick_anger_06"
+		"CMEnabled"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_warlock"
+		"HeroSelectSoundEffect"		"Hero_Rubick.Pick"
+		"GibType"		"default"
+		"Ability1"		"philosophe_stone"
+		"Ability2"		"wind_walk_datadriven"
+		"Ability3"		"null_field_datadriven"
+		"Ability4"		"blinding_light_datadriven"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"poter_experto_patronium"
+		"Ability7"		"generic_hidden"
+		"Ability8"		"rubick_hidden1"
+		"Ability9"		"rubick_hidden2"
+		"Ability10"		"rubick_hidden3"
+		"Ability11"		"special_bonus_hp_225" 
+		"Ability12"		"special_bonus_memethrow_potter_4" // плаш скорость бега +20
+		"Ability13"		"special_bonus_memethrow_potter" // урон камней +100
+		"Ability14"		"special_bonus_attack_damage_70"
+		"Ability15"		"special_bonus_memethrow_potter_3" // длит плаща +5
+		"Ability16"		"special_bonus_all_stats_15"
+		"Ability17"		"special_bonus_memethrow_potter_2" // стан камней +0.75
+		"Ability18"		"special_bonus_spell_amplify_10"
+		"AbilityDraftDisabled"		"0"
+		"AbilityDraftIgnoreCount" "7"
+		"SetUseCustomHeroLevels"  "30"
+		"AbilityDraftAbilities"
+		{
+			"Ability1"		"rubick_telekinesis"
+			"Ability2"		"rubick_fade_bolt"
+			"Ability3"		"rubick_arcane_supremacy"
+		}
+		"AbilityTalentStart"	"11"
+		"ArmorPhysical"		"-1.000000"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"20"
+		"AttackDamageMax"		"36"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.400000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"200"
+			"faster"	"350"
+		}
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"550"
+		"ProjectileModel"		"particles/units/heroes/hero_rubick/rubick_base_attack.vpcf"
+		"ProjectileSpeed"		"1125"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.00000"
+		"AttributeBaseAgility"		"24"
+		"AttributeAgilityGain"		"2.400000"
+		"AttributeBaseIntelligence"		"25"
+		"AttributeIntelligenceGain"		"3.200000"
+		"MovementSpeed"		"300"
+		"MovementTurnRate"		"0.65"
+		"particle_folder"		"particles/units/heroes/hero_rubick"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_rubick.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_rubick.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_rubick/rubick_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"900"
+				"MaxPolygonsLOD1"		"550"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1300"
+				"MaxPolygonsLOD1"		"950"
+				"CanBeUsedAsGeneratingSlot"	"1"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1200"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"ambient_effects"
+				"SlotText"		"#LoadoutSlot_Ambient_Effects"
+				"DisplayInLoadout"		"0"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"voice"
+				"SlotText"		"#LoadoutSlot_Voice"
+			}
+		}
+		"Bot"
+		{
+			"HeroType"		"DOTA_BOT_GANKER | DOTA_BOT_PURE_SUPPORT"
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"0"
+				"RequiresFarm"		"2"
+				"ProvidesSetup"		"1"
+				"RequiresSetup"		"1"
+			}
+		}
+	}
+	//========================================================================================
+	// VOLDEMORT
+	//========================================================================================
+	"npc_dota_hero_lion"
+	{
+		"Model"		"models/heroes/lion/lion.vmdl"
+		"IdleExpression"		"scenes/lion/lion_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Lion"
+		"Enabled"		"1"
+		"BotImplemented"		"1"
+		"HeroPool1"		"1"
+		"HeroUnlockOrder"		"0"
+		"Role"			"Disabler,Nuker, Support"
+		"Rolelevels"	"1,3,3"
+		"Complexity"	"2"
+		"Team"		"Bad"
+		"HeroID"		"26"
+		"ModelScale"		"0.770000"
+		"LoadoutScale"		"0.820000"
+		"VersusScale"		"0.750000"
+		"SpectatorLoadoutScale" "0.8"
+		"HeroGlowColor"		"110 50 165"
+		"PickSound"		"lion_lion_spawn_01"
+		"BanSound"		"lion_lion_anger_03"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Lion"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_witch_doctor"
+		"HeroSelectSoundEffect"		"Hero_Lion.Pick"
+		"GibType"		"default"
+		"Ability1"		"medusa_stone_gaze_datadriven"
+		"Ability2"		"medusa_mystic_snake_datadriven"
+		"Ability3"		"volan_de_mort_reveleo"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"avada_kedavra"
+		"Ability10"		"special_bonus_armor_4"
+		"Ability11"		"special_bonus_memethrow_volan_3" // +2% урона змеи
+		"Ability12"		"special_bonus_memethrow_volan"	  // +30 дпс дуро
+		"Ability13"		"special_bonus_memethrow_volan_4" //+15% кражи маны змеи
+		"Ability14"		"special_bonus_memethrow_volan_2" // + 0.5 сек дуро
+		"Ability15"		"special_bonus_mana_reduction_11"
+		"Ability16"		"special_bonus_spell_amplify_10"
+		"Ability17"		"special_bonus_memethrow_volan_5" // -45 скорости атаки ревело
+		"ArmorPhysical"		"-1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"34"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.430000"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"600"
+		"ProjectileModel"		"particles/units/heroes/hero_lion/lion_base_attack.vpcf"
+		"ProjectileSpeed"		"900"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.100000"
+		"AttributeBaseIntelligence"		"20"
+		"AttributeIntelligenceGain"		"3.3500000"
+		"AttributeBaseAgility"		"17"
+		"AttributeAgilityGain"		"1.700000"
+		"MovementSpeed"		"295"
+		"MovementTurnRate"		"0.500000"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"DisableWearables" 		"0"
+		"precache"
+		{
+			"model"		"models/props_gameplay/frog.vmdl"
+		}
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_lion.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_lion"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_lion.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_lion/lion_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_LeftArm"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1100"
+				"MaxPolygonsLOD1"		"900"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1200"
+				"MaxPolygonsLOD1"		"900"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+		"Bot"
+		{
+			"SupportsEasyMode"	"1"
+			"Loadout"
+			{
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_branches"		"ITEM_CORE"
+				"item_branches"		"ITEM_CORE"
+				"item_magic_stick"		"ITEM_CORE"
+				"item_recipe_magic_wand"		"ITEM_CORE"
+				"item_magic_wand"		"ITEM_DERIVED | ITEM_SELLABLE"
+
+				"item_boots"				"ITEM_CORE"
+				"item_energy_booster"		"ITEM_EXTENSION"
+				"item_arcane_boots"			"ITEM_DERIVED"		
+
+				"item_ring_of_regen"		"ITEM_EXTENSION"
+				"item_branches"		"ITEM_EXTENSION"
+				"item_recipe_headdress"		"ITEM_EXTENSION"
+				"item_headdress"		"ITEM_DERIVED"
+				"item_chainmail"		"ITEM_EXTENSION"
+				"item_branches"		"ITEM_EXTENSION"
+				"item_recipe_buckler"		"ITEM_EXTENSION"
+				"item_buckler"		"ITEM_DERIVED"
+				"item_recipe_mekansm"		"ITEM_EXTENSION"
+				"item_mekansm"		"ITEM_DERIVED"
+
+				"item_blink"		"ITEM_CORE"
+			
+				"item_energy_booster"		"ITEM_EXTENSION"
+				"item_void_stone"		"ITEM_EXTENSION"
+				"item_recipe_aether_lens"	"ITEM_EXTENSION"
+				"item_aether_lens"			"ITEM_DERIVED"
+
+				"item_void_stone"		"ITEM_LUXURY"
+				"item_mystic_staff"		"ITEM_LUXURY"
+				"item_ultimate_orb"		"ITEM_LUXURY"
+				"item_sheepstick"		"ITEM_DERIVED"
+
+				"item_point_booster"		"ITEM_LUXURY"
+				"item_ogre_axe"		"ITEM_LUXURY"
+				"item_staff_of_wizardry"		"ITEM_LUXURY"
+				"item_blade_of_alacrity"		"ITEM_LUXURY"
+				"item_ultimate_scepter"		"ITEM_DERIVED"
+
+				"item_crown"		"ITEM_LUXURY"
+				"item_staff_of_wizardry"		"ITEM_LUXURY"
+				"item_recipe_dagon"		"ITEM_LUXURY"
+				"item_dagon"		"ITEM_DERIVED"
+				"item_recipe_dagon"		"ITEM_LUXURY"
+				"item_recipe_dagon"		"ITEM_LUXURY"
+				"item_recipe_dagon"		"ITEM_LUXURY"
+				"item_recipe_dagon"		"ITEM_LUXURY"
+			}
+			"Build"
+			{
+				"1"		"lion_impale"
+				"2"		"lion_voodoo"
+				"3"		"lion_impale"
+				"4"		"lion_mana_drain"
+				"5"		"lion_impale"
+				"6"		"lion_finger_of_death"
+				"7"		"lion_impale"
+				"8"		"lion_mana_drain"
+				"9"		"lion_mana_drain"
+				"10"		"special_bonus_cast_range_100"
+				"11"		"lion_mana_drain"
+				"12"		"lion_finger_of_death"
+				"13"		"lion_voodoo"
+				"14"		"lion_voodoo"
+				"15"		"special_bonus_gold_income_150"
+				"16"		"lion_voodoo"
+				"17"		""
+				"18"		"lion_finger_of_death"
+				"19"		""
+				"20"		"special_bonus_hp_500"
+				"21"		""
+				"22"		""
+				"23"		""
+				"24"		""
+				"25"		"special_bonus_unique_lion_2"
+			}
+			"HeroType"		"DOTA_BOT_GANKER | DOTA_BOT_STUN_SUPPORT | DOTA_BOT_NUKER"
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"2"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"2"
+				"RequiresSetup"		"0"
+			}
+		}
+	}
+	//========================================================================================
+	// BOMJ
+	//========================================================================================
+	"npc_dota_hero_undying"
+	{
+		"Model"		"models/heroes/undying/undying.vmdl"
+		"IdleExpression"		"scenes/undying/undying_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Undying"
+		"IdleSoundLoop"		"Hero_Undying.IdleLoop"
+		"Enabled"		"1"
+		"Role"			"Carry,Durable"
+		"Rolelevels"	"2,3"
+		"Complexity"	"1"
+		"Team"		"Bad"
+		"HeroID"		"85"
+		"ModelScale"		"0.930000"
+		"VersusScale"		"0.820000"
+		"LoadoutScale"		"0.870000"
+		"SpectatorLoadoutScale" "0.88"
+		"AlternateLoadoutScale"	"0.670000"  //Golem scale
+		"NameAliases"		"dirge"
+		"workshop_guide_name"		"Undying"
+		"PickSound"		"undying_undying_spawn_01"
+		"BanSound"		"undying_undying_anger_02"
+		"CMEnabled"		"1"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_sand_king"
+		"HeroSelectSoundEffect"		"Hero_Undying.Pick"
+		"GibType"		"goo"
+		"GibTintColor"	"73 82 68 255"
+		"Ability1"		"bomj_zabuhal"
+		"Ability2"		"bomj_jinada_datadriven"
+		"Ability3"		"smoke_screen_datadriven"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"alko_rage_datadriven"
+		"Ability10"		"special_bonus_memethrow_bomj_3" // +15% промахов забухать
+		"Ability11"		"special_bonus_movement_speed_15"
+		"Ability12"		"special_bonus_memethrow_bomj_2" // +60 к урону забухать
+		"Ability13"		"special_bonus_memethrow_bomj"	// +10dmg peregar
+		"Ability14"		"special_bonus_attack_damage_60"
+		"Ability15"		"special_bonus_memethrow_bomj_5" // +1к дальность бега
+		"Ability16"		"special_bonus_memethrow_bomj_4" // +1 макс регена
+		"Ability17"		"special_bonus_cooldown_reduction_25"
+		"ArmorPhysical"		"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"42"
+		"AttackDamageMax"		"50"
+		"AttackRate"		"1.500000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"30"
+		"AttributeStrengthGain"		"3.200000"
+		"AttributeBaseAgility"		"12"
+		"AttributeAgilityGain"		"1.400000"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"1.800000"
+		"MovementSpeed"		"280"
+		"MovementTurnRate"		"0.600000"
+		"particle_folder"		"particles/units/heroes/hero_undying"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_undying.vsndevts"
+		"DisableWearables" 		"1"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_undying/undying_loadout.vpcf"		"loadout"
+			}
+		}
+		"precache"
+		{
+			"model"		"models/heroes/undying/undying_flesh_golem.vmdl"
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"700"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"armor"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2300"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"600"
+				"MaxPolygonsLOD1"		"300"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"ability3"
+				"SlotText"		"#LoadoutSlot_Undying_Tombstone"
+				"TextureWidth"		"0"
+				"TextureHeight"		"0"
+				"MaxPolygonsLOD0"	"0"
+				"MaxPolygonsLOD1"	"0"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_unit_tombstone"
+					"1" "npc_dota_unit_undying_zombie"
+				}
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"ability4"
+				"SlotText"		"#LoadoutSlot_Undying_Flesh_Golem"
+				"no_import"		"1"
+				"LoadoutPreviewMode"		"transformation"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"5300"
+				"MaxPolygonsLOD1"		"3700"
+				"MaxBonesLOD0"			"62"
+				"MaxBonesLOD1"			"62"
+				"DisplayInLoadout"		"1"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"ambient_effects"
+				"SlotText"		"#LoadoutSlot_Ambient_Effects"
+				"DisplayInLoadout"		"0"
+			}
+		}
+		"Bot"
+		{
+			"HeroType"		"DOTA_BOT_TANK | DOTA_BOT_SEMI_CARRY"
+			"LaningInfo"
+			{
+				"SoloDesire"		"0"
+				"RequiresBabysit"		"1"
+				"ProvidesBabysit"		"0"
+				"SurvivalRating"		"1"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"1"
+				"RequiresSetup"		"0"
+			}
+		}
+	}
+	//========================================================================================
+	// NARUTO наруто
+	//========================================================================================
+   "npc_dota_hero_omniknight"
+	{
+		"Model"		"models/boruto.vmdl"
+		"IdleExpression"		"scenes/omniknight/omniknight_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Omniknight"
+		"Enabled"		"1"
+		"BotImplemented"		"1"
+		"HeroPool1"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Carry, Nuker"
+		"Rolelevels"	"3, 1"
+		"Complexity"	"3"
+		"Team"		"Good"
+		"HeroID"		"57"
+		"ModelScale"		"1.20000"
+		"VersusScale"		"0.8night0000"
+		"LoadoutScale"		"0.810000"
+		"SpectatorLoadoutScale" "0.8"
+		"HeroGlowColor"		"120 205 255"
+		"CMEnabled"		"1"
+		"PickSound"		"omniknight_omni_spawn_01"
+		"BanSound"		"omniknight_omni_anger_04"
+		"workshop_guide_name"		"Omniknight"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_dragon_knight"
+		"HeroSelectSoundEffect"		"Hero_Omniknight.Pick"
+		"GibType"		"default"
+		"Ability1"		"naruto_gamahiro"
+		"Ability2"		"custom_rasengan"
+		"Ability3"		"phantasm_datadriven"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"naruto_sagemode"
+		"Ability10"		"special_bonus_memethrow_naruto_5"	// 200 урона расенган
+		"Ability11"		"special_bonus_memethrow_naruto_6"	// +15% урона от маны
+		"Ability12"		"special_bonus_memethrow_naruto_3"  // 	2x длительность клонов
+		"Ability13"		"special_bonus_memethrow_naruto_7" // расенган станит
+		"Ability14"		"special_bonus_memethrow_naruto_8" //  жаба усиление
+		"Ability15"		"special_bonus_memethrow_naruto_4" //	-100% получаемого урона клонов
+		"Ability16"		"special_bonus_memethrow_naruto" // 	+4 клона
+		"Ability17"		"special_bonus_memethrow_naruto_2" // 	100% урона клонов
+		"DisableWearables"	"1"
+		"ArmorPhysical"		"2"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"41"
+		"AttackDamageMax"		"51"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.433000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.50000"
+		"AttributeBaseAgility"		"23"
+		"AttributeAgilityGain"		"3.10000"
+		"AttributeBaseIntelligence"		"21"
+		"AttributeIntelligenceGain"		"2.200000"
+		"MovementSpeed"		"325"
+		"MovementTurnRate"		"999999999.00"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_omniknight.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_omniknight"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_omniknight/omniknight_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"450"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1800"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"body_head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"DisplayInLoadout" "0"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"misc"
+				"SlotText"		"#LoadoutSlot_Misc"
+			}
+		}
+		"Bot"
+		{
+			"Loadout"
+			{
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_clarity"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_clarity"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_clarity"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+
+				"item_sobi_mask"		"ITEM_CORE"
+				"item_ring_of_protection"		"ITEM_CORE"
+				"item_ring_of_basilius"		"ITEM_DERIVED | ITEM_SELLABLE"
+
+				"item_boots"		"ITEM_CORE"
+
+				"item_ring_of_regen"	"ITEM_CORE"
+				"item_gauntlets"		"ITEM_CORE"
+				"item_gauntlets"		"ITEM_CORE"
+				"item_soul_ring"		"ITEM_DERIVED | ITEM_SELLABLE"
+
+				"item_energy_booster"		"ITEM_CORE"
+				"item_arcane_boots"		"ITEM_DERIVED"
+				"item_ring_of_regen"		"ITEM_CORE"
+				"item_branches"		"ITEM_CORE"
+				"item_recipe_headdress"		"ITEM_CORE"
+				"item_headdress"		"ITEM_DERIVED"
+
+				"item_chainmail"		"ITEM_CORE"
+				"item_branches"		"ITEM_CORE"
+				"item_recipe_buckler"		"ITEM_CORE"
+				"item_buckler"		"ITEM_DERIVED"
+
+				"item_recipe_mekansm"		"ITEM_CORE"
+				"item_mekansm"		"ITEM_DERIVED"
+
+				"item_cloak"		"ITEM_EXTENSION"
+				"item_ring_of_health"		"ITEM_EXTENSION"
+				"item_ring_of_regen"		"ITEM_EXTENSION"
+				"item_hood_of_defiance"		"ITEM_DERIVED"
+
+				"item_branches"		"ITEM_EXTENSION"
+				"item_ring_of_regen"		"ITEM_EXTENSION"
+				"item_recipe_headdress"		"ITEM_EXTENSION"
+				"item_headdress"		"ITEM_DERIVED"
+
+				"item_recipe_pipe"		"ITEM_EXTENSION"
+				"item_pipe"		"ITEM_DERIVED"
+
+				"item_platemail"		"ITEM_LUXURY"
+				"item_hyperstone"		"ITEM_LUXURY"
+				"item_chainmail"		"ITEM_LUXURY"
+				"item_recipe_assault"		"ITEM_LUXURY"
+				"item_assault"		"ITEM_DERIVED"
+
+				"item_ultimate_orb"		"ITEM_LUXURY"
+				"item_void_stone"		"ITEM_LUXURY"
+				"item_mystic_staff"		"ITEM_LUXURY"
+				"item_sheepstick"		"ITEM_DERIVED"
+
+				"item_reaver"		"ITEM_LUXURY"
+				"item_ring_of_tarrasque"		"ITEM_LUXURY"
+				"item_vitality_booster"		"ITEM_LUXURY"
+				"item_heart"		"ITEM_DERIVED"
+			}
+			"Build"
+			{
+				"1"		"omniknight_purification"
+				"2"		"omniknight_repel"
+				"3"		"omniknight_purification"
+				"4"		"omniknight_degen_aura"
+				"5"		"omniknight_purification"
+				"6"		"omniknight_guardian_angel"
+				"7"		"omniknight_purification"
+				"8"		"omniknight_repel"
+				"9"		"omniknight_repel"
+				"10"		"special_bonus_gold_income_90"
+				"11"		"omniknight_repel"
+				"12"		"omniknight_guardian_angel"
+				"13"		"omniknight_degen_aura"
+				"14"		"omniknight_degen_aura"
+				"15"		"special_bonus_exp_boost_35"
+				"16"		"omniknight_degen_aura"
+				"17"		""
+				"18"		"omniknight_guardian_angel"
+				"19"		""
+				"20"		"special_bonus_unique_omniknight_2"
+				"21"		""
+				"22"		""
+				"23"		""
+				"24"		""
+				"25"		"special_bonus_unique_omniknight_1"
+			}
+			"HeroType"		"DOTA_BOT_PURE_SUPPORT"
+			"LaningInfo"
+			{
+				"SoloDesire"		"0"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"2"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"0"
+			}
+		}
+	}
+//==============================================================================================================================================================
+// ADSKIY GONSHIK
+//==============================================================================================================================================================
+		"npc_dota_hero_chaos_knight"
+	{
+		"Model"		"models/heroes/chaos_knight/chaos_knight.vmdl"
+		"SoundSet"		"Hero_ChaosKnight"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Disabler,Nuker,Escape"
+		"Rolelevels"	"3,3,2"
+		"Complexity"	"3"
+		"Team"		"Bad"
+		"HeroID"		"81"
+		"ModelScale"		"0.790000"
+		"VersusScale"		"0.720000"
+		"LoadoutScale"		"0.720000"
+		"PickSound"		"chaos_knight_chaknight_spawn_02"
+		"BanSound"		"chaos_knight_chaknight_anger_06"
+		"CMEnabled"		"1"
+		"new_player_enable"		"1"
+		"BotImplemented"		"1"
+		"workshop_guide_name"		"Chaos Knight"
+		"LastHitChallengeRival"		"npc_dota_hero_omniknight"
+		"HeroSelectSoundEffect"		"Hero_ChaosKnight.Pick"
+		"GibType"		"ethereal"
+		"HealthBarOffset"		"260"	
+		"GibTintColor"	"166 29 17 255"
+		"NameAliases"		"ck"
+		"DisableWearables"	"1"
+		"Ability1"		"searing_chains_datadriven"
+		"Ability2"		"batrider_flaming_lasso"
+		"Ability3"		"batrider_firefly"
+		"Ability4"		"stampede_datadriven"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"acid_spray_datadriven"
+		"Ability10"		"special_bonus_memethrow_gonshik_4" // 50 урона с ада
+		"Ability11"		"special_bonus_movement_speed_20"
+		"Ability12"		"special_bonus_memethrow_gonshik"	// +0.5 сек цепей
+		"Ability13"		"special_bonus_unique_batrider_1" // + 10 сек адского поджёга
+		"Ability14"		"special_bonus_memethrow_gonshik_2" // +300 радиус цепей
+		"Ability15"		"special_bonus_armor_10"
+		"Ability16"		"special_bonus_cooldown_reduction_20"
+		"Ability17"		"special_bonus_memethrow_gonshik_3" //+ 100 дпс цепей
+		"ArmorPhysical"		"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"50"
+		"AttackDamageMax"		"50"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.500000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"24"
+		"AttributeStrengthGain"		"3.100000"
+		"AttributeBaseAgility"		"17"
+		"AttributeAgilityGain"		"1.700000"
+		"AttributeBaseIntelligence"		"25"
+		"AttributeIntelligenceGain"		"2.700000"
+		"MovementSpeed"		"350"
+		"MovementTurnRate"		"0.500000"
+		"particle_folder"		"particles/units/heroes/hero_chaos_knight"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_chaos_knight.vsndevts"
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"offhand_weapon"
+				"SlotText"		"#LoadoutSlot_Shield"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"600"
+				"MaxPolygonsLOD1"		"300"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"mount"
+				"SlotText"		"#LoadoutSlot_Mount"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"2000"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+	}
+//==============================================================================================================================================================
+// LEONARDO
+//==============================================================================================================================================================
+
+	"npc_dota_hero_juggernaut"
+	{
+		"Model"		"models/heroes/juggernaut/juggernaut.vmdl"
+		"SoundSet"		"Hero_Juggernaut"
+		"PickSound"		"juggernaut_jug_spawn_03"
+		"BanSound"		"juggernaut_jug_anger_04"
+		"Enabled"		"1"
+		"HeroPool1"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Carry,Escape"
+		"Rolelevels"	"3,3"
+		"Complexity"	"1"
+		"Team"		"Good"
+		"HeroID"		"8"
+		"BotImplemented"		"1"
+		"Press"		"1"
+		"ModelScale"		"0.850000"
+		"VersusScale"		"0.850000"
+		"LoadoutScale"		"1"
+		"SpectatorLoadoutScale" "1"
+		"HeroGlowColor"		"222 120 36"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Juggernaut"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_skeleton_king"
+		"HeroSelectSoundEffect"		"Hero_Juggernaut.Pick"
+		"GibType"		"default"
+		"Ability1"		"leonardo_suriken_dd"
+		"Ability2"		"drunken_brawler_datadriven"
+		"Ability3"		"bristleback_datadriven"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"leonardo_slash"
+		"Ability10"		"special_bonus_memethrow_leo"
+		"Ability11"		"special_bonus_memethrow_leo_5"
+		"Ability12"		"special_bonus_memethrow_leo_3"
+		"Ability13"		"special_bonus_attack_speed_25"
+		"Ability14"		"special_bonus_agility_10"
+		"Ability15"		"special_bonus_memethrow_leo_4"
+		"Ability16"		"special_bonus_memethrow_leo_2"
+		"Ability17"		"special_bonus_cooldown_reduction_25"
+		"DisableWearables"	"1"
+		"ArmorPhysical"		"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"28"
+		"AttackDamageMax"		"32"
+		"AttackRate"		"1.30000"
+		"BaseAttackSpeed"		"110"
+		"AttackAnimationPoint"		"0.330000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"170"
+			"faster"	"275"
+			"fastest"	"350"
+		}
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.2000"
+		"AttributeBaseIntelligence"		"12"
+		"AttributeIntelligenceGain"		"1.400000"
+		"AttributeBaseAgility"		"27"
+		"AttributeAgilityGain"		"3.000000"
+		"StatusHealthRegen"		"0.5"
+		"MovementSpeed"		"320"
+		"MovementTurnRate"		"0.600000"
+		"MovementSpeedActivityModifiers"
+		{
+			"walk"		"0"
+			"run"		"345"
+			"run_fast"	"373"
+		}
+		"HasAggressiveStance"		"1"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"precache"
+		{
+			"model"		"models/heroes/juggernaut/jugg_healing_ward.vmdl"
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"400"
+				"MaxPolygonsLOD1"		"200"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1300"
+				"MaxPolygonsLOD1"		"800"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"legs"
+				"SlotText"		"#LoadoutSlot_Legs"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"ability2"
+				"SlotText"		"#LoadoutSlot_Juggernaut_HealingWard"
+				"no_import"		"1"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2400"
+				"MaxPolygonsLOD1"		"2400"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_juggernaut_healing_ward"
+				}
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"summon"
+				"SlotText"		"#LoadoutSlot_Pet"
+				"ShowItemOnGeneratedUnits" "1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_companion"
+				}
+			}
+			"8"
+			{
+				"SlotIndex"		"8"
+				"SlotName"		"voice"
+				"SlotText"		"#LoadoutSlot_Voice"
+			}
+		}
+		"particle_folder"		"particles/units/heroes/hero_juggernaut"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_juggernaut.vsndevts"
+		"AbilityPreview"
+		{
+			"resource"		"resource/UI/Heroes/default.res"
+			"movie"		"media/heroes/default"
+			"resource"		"resource/UI/Heroes/default.res"
+			"resource"		"resource/UI/Heroes/default.res"
+			"resource"		"resource/UI/Heroes/default.res"
+			"resource"		"resource/UI/Heroes/default.res"
+		}
+	}
+	// SNIPER
+		"npc_dota_hero_sniper"
+	{
+		"Model"		"models/heroes/sniper/sniper.vmdl"
+		"IdleExpression"		"scenes/sniper/sniper_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Sniper"
+		"Enabled"		"1"
+		"HeroPool1"		"1"
+		"HeroUnlockOrder"		"0"
+		"Role"			"Carry, Escape"
+		"Rolelevels"	"3,1"
+		"Complexity"	"1"
+		"Team"		"Good"
+		"HeroID"		"35"
+		"BotImplemented"		"1"
+		"ModelScale"		"0.840000"
+		"LoadoutScale"		"1"
+		"HeroGlowColor"		"237 154 15"
+		"PickSound"		"sniper_snip_spawn_01"
+		"BanSound"		"sniper_snip_anger_01"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Sniper"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_drow_ranger"
+		"HeroSelectSoundEffect"		"Hero_Sniper.Pick"
+		"GibType"		"default"
+		"Ability1"		"refraction_datadriven"
+		"Ability2"		"sniper_headshot_datadriven"
+		"Ability3"		"ursa_overpower_datadriven"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"sniper_assassinate_lua"
+		"Ability10"		"special_bonus_memethrow_sniper" // урон хита
+		"Ability11"		"special_bonus_memethrow_sniper_2" // длит замедление хита
+		"Ability12"		"special_bonus_memethrow_sniper_3" // шанс хита
+		"Ability13"		"special_bonus_memethrow_sniper_7" // +длит  урона с рефракшена
+		"Ability14"		"special_bonus_memethrow_sniper_4" // микробаш хита
+		"Ability15"		"special_bonus_memethrow_sniper_6" // + атаки air horn
+		"Ability16"		"special_bonus_memethrow_sniper_5" // 100% хит во время horn
+		"Ability17"		"special_bonus_memethrow_sniper_8" // сквозь линку
+		"ArmorPhysical"		"-1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"26"
+		"AttackDamageMax"		"31"
+		"AttackRate"		"1.75000"
+		"AttackAnimationPoint"		"0.170000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"266"
+			"faster"	"376"
+			"fastest"	"487"
+		}
+		"AttackAcquisitionRange"		"950"
+		"AttackRange"		"680"
+		"ProjectileModel"		"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"
+		"ProjectileSpeed"		"3000"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"18"
+		"AttributeStrengthGain"		"1.5500000"
+		"AttributeBaseIntelligence"		"14"
+		"AttributeIntelligenceGain"		"2.300000"
+		"AttributeBaseAgility"		"24"
+		"AttributeAgilityGain"		"2.900000"
+		"MovementSpeed"		"293"
+		"MovementTurnRate"		"0.700000"
+		"HasAggressiveStance"		"1"
+		"VisionNighttimeRange"		"1400"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_sniper/sniper_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1100"
+				"MaxPolygonsLOD1"		"700"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"600"
+				"MaxPolygonsLOD1"		"450"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+		"particle_folder"		"particles/units/heroes/hero_sniper"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_sniper.vsndevts"
+	}
+	// CHUBAKA	чубака chubakka чубакка
+		"npc_dota_hero_earthshaker"
+	{
+		"Model"		"models/heroes/earthshaker/earthshaker.vmdl"
+		"IdleExpression"		"scenes/earthshaker/earthshaker_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Earthshaker"
+		"PickSound"		"earthshaker_erth_spawn_01"
+		"BanSound"		"earthshaker_erth_anger_02"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"1"
+		"BotImplemented"		"1"
+		"Role"			"Disabler,Durable,Carry,Nuker"
+		"Rolelevels"	"3,3,1,1"
+		"Complexity"	"1"
+		"Team"		"Good"
+		"HeroID"		"7"
+		"ModelScale"		"1.15000"
+		"VersusScale"		"0.770000"
+		"HeroGlowColor"		"255 160 0"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Earthshaker"
+		"NoCombine"		"0"
+		"LastHitChallengeRival"		"npc_dota_hero_tiny"
+		"HeroSelectSoundEffect"		"Hero_Earthshaker.Pick"
+		"GibType"		"default"
+		"new_player_enable"		"1"
+		"Ability1"		"chubaka_earthshock"
+		"Ability2"		"slardar_bash_datadriven"
+		"Ability3"		"chubaka_extra_armor"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"chubakka_rage"
+		"Ability10"		"special_bonus_memethrow_chubakka_2"
+		"Ability11"		"special_bonus_memethrow_chubakka_4"
+		"Ability12"		"special_bonus_memethrow_chubakka"
+		"Ability13"		"special_bonus_memethrow_chubakka_5"
+		"Ability14"		"special_bonus_memethrow_chubakka_6"
+		"Ability15"		"special_bonus_memethrow_chubakka_8"
+		"Ability16"		"special_bonus_memethrow_chubakka_3"
+		"Ability17"		"special_bonus_memethrow_chubakka_7"
+		"ArmorPhysical"		"3"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"62"
+		"AttackDamageMax"		"72"
+		"AttackRate"		"2.400000"
+		"AttackAnimationPoint"		"0.6500"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"30"
+		"AttributeStrengthGain"		"4.500000"
+		"AttributeBaseIntelligence"		"16"
+		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeBaseAgility"		"10"
+		"AttributeAgilityGain"		"1.000000"
+		"StatusHealthRegen"		"1.0"
+		"MovementSpeed"		"315"
+		"MovementTurnRate"		"0.900000"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"particle_folder"		"particles/units/heroes/hero_earthshaker"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_earthshaker.vsndevts"
+		"DisableWearables" 		"1"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_earthshaker/earthshaker_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"no_import"		"1" //imported using template
+				"SlotText"		"#LoadoutSlot_Earthshaker_Totem"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"850"
+				"MaxPolygonsLOD1"		"550"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"arms"
+				"no_import"		"1" //imported using template
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"summon"
+				"SlotText"		"#LoadoutSlot_Pet"
+				"ShowItemOnGeneratedUnits" "1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_companion"
+				}
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+	}
+		// SCORPION
+		"npc_dota_hero_phantom_assassin"
+	{
+		"Model"		"models/heroes/phantom_assassin/phantom_assassin.vmdl"
+		"IdleExpression"		"scenes/phantom_assassin/phantom_assassin_exp_idle_01.vcd"
+		"SoundSet"		"Hero_PhantomAssassin"
+		"Enabled"		"1"
+		"BotImplemented"		"1"
+		"HeroUnlockOrder"		"1"
+		"Role"			"Carry"
+		"Rolelevels"	"3"
+		"Complexity"	"2"
+		"Team"		"Bad"
+		"HeroID"		"44"
+		"ModelScale"		"0.860000"
+		"VersusScale"		"0.930000"
+		"LoadoutScale"		"0.930000"
+		"SpectatorLoadoutScale" "0.95"
+		"HeroGlowColor"		"154 97 133"
+		"PickSound"		"phantom_assassin_phass_spawn_01"
+		"BanSound"		"phantom_assassin_phass_anger_08"
+		"NameAliases"		"pa;mortred"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Phantom Assassin"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_bounty_hunter"
+		"HeroSelectSoundEffect"		"Hero_PhantomAssassin.Pick"
+		"GibType"		"default"
+		"Ability1"		"pudge_meat_hook_lua"
+		"Ability2"		"scorpion_crash"
+		"Ability3"		"scorpion_fatality_datadriven"
+		"Ability4"		"scorpion_teleport"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"duel_datadriven"
+		"Ability10"		"special_bonus_memethrow_scorpion" // 30 урона краша
+		"Ability11"		"special_bonus_memethrow_scorpion_6" // 500 дальности хука
+		"Ability12"		"special_bonus_memethrow_scorpion_3" // 5% шанс краша
+		"Ability13"		"special_bonus_memethrow_scorpion_4" // 100 урона хука
+		"Ability14"		"special_bonus_memethrow_scorpion_8" // Вампиризм фаталити
+		"Ability15"		"special_bonus_memethrow_scorpion_5" // +1000 скорости хука
+		"Ability16"		"special_bonus_memethrow_scorpion_2" // краш чистый урон
+		"Ability17"		"special_bonus_memethrow_scorpion_7" // + 15 урона за победу дуэли
+		"DisableWearables"	"1"
+		"ArmorPhysical"		"3"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"32"
+		"AttackDamageMax"		"37"
+		"AttackRate"		"1.5500000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"249"
+			"faster"	"350"
+			"fastest"	"450"
+		}
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"25"
+		"AttributeStrengthGain"		"2.7"
+		"AttributeBaseAgility"		"26"
+		"AttributeAgilityGain"		"2.7000"
+		"AttributeBaseIntelligence"		"15"
+		"AttributeIntelligenceGain"		"1.400000"
+		"StatusHealthRegen"		"0.25"
+		"MovementSpeed"		"315"
+		"MovementTurnRate"		"0.600000"
+		"HasAggressiveStance"		"1"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_phantom_assassin/phantom_assassin_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1200"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"550"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"600"
+				"MaxPolygonsLOD1"		"450"
+				"SlotText"		"#LoadoutSlot_Back"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"particle_folder"		"particles/units/heroes/hero_phantom_assassin"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_phantom_assassin.vsndevts"
+	}
+	"npc_dota_hero_ogre_magi"
+	{
+		"Model"		"models/heroes/ogre_magi/ogre_magi.vmdl"
+		"IdleExpression"		"scenes/ogre_magi/ogre_magi_exp_idle_01.vcd"
+		"SoundSet"		"Hero_OgreMagi"
+		"Enabled"		"1"
+		"Role"			"Nuker,Disabler"
+		"Rolelevels"	"3,1"
+		"Complexity"	"2"
+		"Team"		"Good"
+		"HeroID"		"84"
+		"ModelScale"		"0.930000"
+		"VersusScale"		"0.840000"
+		"LoadoutScale"		"0.870000"
+		"MaxModelScaleMultiplier"	"1.22"
+		"SpectatorLoadoutScale" "0.88"
+		"NameAliases"		"om"
+		"PickSound"		"ogre_magi_ogmag_spawn_01"
+		"BanSound"		"ogre_magi_ogmag_anger_04"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Ogre Magi"
+		"LastHitChallengeRival"		"npc_dota_hero_dragon_knight"
+		"new_player_enable"		"1"
+		"HeroSelectSoundEffect"		"Hero_OgreMagi.Pick"
+		"GibType"		"default"
+		"Ability1"		"test_of_faith_datadriven"
+		"Ability2"		"ogre_magi_casino_datadriven"
+		"Ability3"		"chaos_bolt_datadriven"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"ogre_kover_datadriven"
+		"Ability10"		"special_bonus_memethrow_casino" // шанс джекпота
+		"Ability11"		"special_bonus_memethrow_casino_6" // 75 мин урона
+		"Ability12"		"special_bonus_memethrow_casino_2" // шанс джекпота
+		"Ability13"		"special_bonus_memethrow_casino_7" // 125 маг урона
+		"Ability14"		"special_bonus_memethrow_casino_3" // шанс джекпота
+		"Ability15"		"special_bonus_memethrow_casino_5" // +500 к макс выигрышу
+		"Ability16"		"special_bonus_memethrow_casino_4" // шанс джекпота
+		"Ability17"		"special_bonus_memethrow_casino_8"
+		"ArmorPhysical"		"5.000000"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"49"
+		"AttackDamageMax"		"55"
+		"AttackRate"		"1.70000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"150"
+			"faster"	"250"
+		}
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"23"
+		"AttributeStrengthGain"		"3.500000"
+		"AttributeBaseAgility"		"14"
+		"AttributeAgilityGain"		"1.90000"
+		"AttributeBaseIntelligence"		"15"
+		"AttributeIntelligenceGain"		"2.500000"
+		"StatusHealthRegen"		"3.25"
+		"MovementSpeed"		"310"
+		"MovementTurnRate"		"0.600000"
+		"particle_folder"		"particles/units/heroes/hero_ogre_magi"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_ogre_magi.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_ogre_magi/ogre_magi_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Heads"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"850"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"ambient_effects"
+				"SlotText"		"#LoadoutSlot_Ambient_Effects"
+				"DisplayInLoadout"		"0"
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"voice"
+				"SlotText"		"#LoadoutSlot_Voice"
+			}
+		}
+	}
+	
+	// SHREK Шрек
+	"npc_dota_hero_skeleton_king"
+	{
+		"Model"		"models/heroes/wraith_king/wraith_king.vmdl"
+		"IdleExpression"		"scenes/skeleton_king/skeleton_king_exp_idle_01.vcd"
+		"SoundSet"		"Hero_SkeletonKing"
+		"Enabled"		"1"
+		"HeroPool1"		"1"
+		"HeroPool2"		"1"
+		"HeroUnlockOrder"		"0"
+		"Role"			"Durable,Disabler,Nuker"
+		"Rolelevels"	"2,1,3"
+		"Complexity"	"3"
+		"Team"		"Bad"
+		"HeroID"		"42"
+		"ModelScale"		"0.940000"
+		"VersusScale"		"0.90000"
+		"LoadoutScale"		"0.920000"
+		"HeroGlowColor"		"226 224 36"
+		"CMEnabled"		"1"
+		"BotImplemented"		"1"
+		"PickSound"		"skeleton_king_wraith_spawn_01"
+		"BanSound"		"skeleton_king_wraith_anger_04"
+		"NameAliases"		"sk;snk;wk;skeleton"
+		"workshop_guide_name"		"Wraith King"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_sand_king"
+		"HeroSelectSoundEffect"		"Hero_SkeletonKing.Pick"
+		"GibType"		"ethereal"
+		"GibTintColor"	"92 196 128 255"
+		"Ability1"		"shrek_boloto_datadriven"
+		"Ability2"		"shrek_osel_lua"
+		"Ability3"		"shrek_scream"
+		"Ability4"		"shrek_bad_smell"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"shrek_jump"
+		"Ability10"		"special_bonus_memethrow_shrek_4"
+		"Ability11"		"special_bonus_memethrow_shrek_6"
+		"Ability12"		"special_bonus_memethrow_shrek_5"
+		"Ability13"		"special_bonus_memethrow_shrek_7"
+		"Ability14"		"special_bonus_memethrow_shrek_3"
+		"Ability15"		"special_bonus_memethrow_shrek_2"
+		"Ability16"		"special_bonus_memethrow_shrek_8"
+		"Ability17"		"special_bonus_memethrow_shrek"
+		"DisableWearables"	"1"
+		"ArmorPhysical"		"-1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"50"
+		"AttackDamageMax"		"52"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.560000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"20"
+		"AttributeStrengthGain"		"2.9"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeBaseAgility"		"18"
+		"AttributeAgilityGain"		"1.600000"
+		"MovementSpeed"		"320"
+		"MovementTurnRate"		"0.600000"
+		"MovementSpeedActivityModifiers"
+		{
+			"walk"		"0"
+			"run"		"360"
+		}
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"175"
+			"faster"	"250"
+			"fastest"	"350"
+		}
+		"animation_transitions"
+		{
+			"ACT_DOTA_RUN"
+			{
+				"regular"		"0.300000"
+			}
+			"ACT_DOTA_IDLE"
+			{
+				"regular"		"0.55000"
+			}
+		}
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"particle_folder"		"particles/units/heroes/hero_skeletonking"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_skeleton_king.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_skeletonking/wraith_king_new_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+				"LoadoutPreviewMode"		"hero"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_wraith_king_skeleton_warrior"
+				}
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1250"
+				"MaxPolygonsLOD1"		"650"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"600"
+				"MaxPolygonsLOD1"		"300"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"misc"
+				"SlotText"		"#LoadoutSlot_Misc"
+				"DisplayInLoadout" "0"
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"armor"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"256"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+		}
+	}
+	// ===============
+	// Русский Сергей серёжа Serega sergey
+	// ===============
+	"npc_dota_hero_silencer"
+	{
+		"Model"		"models/heroes/silencer/silencer.vmdl"
+		"IdleExpression"		"scenes/silencer/silencer_exp_idle_01.vcd"
+		"SoundSet"		"Hero_Silencer"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Carry,Disabler,Durable,Escape"
+		"Rolelevels"	"3,2,2,2"
+		"Complexity"	"2"
+		"Team"		"Good"
+		"HeroID"		"75"
+		"ModelScale"		"1.00000"
+		"VersusScale"		"0.800000"
+		"LoadoutScale"		"0.800000"
+		"PickSound"		"silencer_silen_spawn_01"
+		"BanSound"		"silencer_silen_anger_07"
+		"workshop_guide_name"		"Silencer"
+		"CMEnabled"		"1"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_zuus"
+		"HeroSelectSoundEffect"		"Hero_Silencer.Pick"
+		"GibType"		"default"
+		"Ability1"		"sergey_heal"
+		"Ability2"		"russian_sergey_home"
+		"Ability3"		"sergey_krik"
+		"Ability4"		"serega_vsego_horoshego"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"russian_sergey_what_is_this_word"
+		"Ability10"		"special_bonus_hp_225"
+		"Ability11"		"special_bonus_movement_speed_20"
+		"Ability12"		"special_bonus_all_stats_10"
+		"Ability13"		"special_bonus_memethrow_serega_3" // Всего хорошего чистый урон
+		"Ability14"		"special_bonus_memethrow_serega_4" // Быкануть чистый урон
+		"Ability15"		"special_bonus_memethrow_serega_2" // +5% всего хорошего
+		"Ability16"		"special_bonus_memethrow_serega_5" // +0.5 сек длительности страха
+		"Ability17"		"special_bonus_memethrow_serega" // Лечит фулл хп
+		"DisableWearables"	"1"
+		"ArmorPhysical"		"0"
+		"BaseAttackSpeed"		"110"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"29"
+		"AttackDamageMax"		"43"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.500000"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"600"
+		"ProjectileModel"		"particles/units/heroes/hero_silencer/silencer_base_attack.vpcf"
+		"ProjectileSpeed"		"900"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"19"
+		"AttributeStrengthGain"		"2.700000"
+		"AttributeBaseAgility"		"22"
+		"AttributeAgilityGain"		"2.600000"
+		"AttributeBaseIntelligence"		"28"
+		"AttributeIntelligenceGain"		"3.100000"
+		"MovementSpeed"		"305"
+		"MovementTurnRate"		"0.600000"
+		"particle_folder"		"particles/units/heroes/hero_silencer"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_silencer.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_silencer/silencer_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"offhand_weapon"
+				"SlotText"		"#LoadoutSlot_Shield"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1050"
+				"MaxPolygonsLOD1"		"550"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"400"
+				"MaxPolygonsLOD1"		"400"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+		"Bot"
+		{
+			"HeroType"		"DOTA_BOT_PURE_SUPPORT | DOTA_BOT_SEMI_CARRY"
+			"LaningInfo"
+			{
+				"SoloDesire"		"0"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"0"
+				"RequiresFarm"		"2"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"2"
+			}
+		}
+	}
+	//ГЕНЕРАЛ ЖМЫШЕНКО general jmishenko
+	"npc_dota_hero_rattletrap"
+	{
+		"Model"		"models/heroes/rattletrap/rattletrap.vmdl"
+		"SoundSet"		"Hero_Rattletrap"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Disabler,Nuker,Carry"
+		"Rolelevels"	"3,2,2"
+		"Complexity"	"3"
+		"Team"		"Good"
+		"HeroID"		"51"
+		"ModelScale"		"0.880000"
+		"VersusScale"		"1.030000"
+		"SpectatorLoadoutScale" "1"
+		"LoadoutScale"		"1.100000"
+		"HeroGlowColor"		"252 220 64"
+		"PickSound"		"rattletrap_ratt_spawn_05"
+		"BanSound"		"rattletrap_ratt_anger_06"
+		"CMEnabled"		"1"
+		"workshop_guide_name"		"Clockwerk"
+		"new_player_enable"		"1"
+		"LastHitChallengeRival"		"npc_dota_hero_sand_king"
+		"HeroSelectSoundEffect"		"Hero_Rattletrap.Pick"
+		"GibType"		"motor"
+		"Ability1"		"slava_ukraine"
+		"Ability2"		"techies_land_mines_datadriven"
+		"Ability3"		"ban_nahui"
+		"Ability4"		"enot_oreo"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"valakas_donbass"
+		"Ability10"		"special_bonus_memethrow_jmishenko_6" 	// +10% по забаненым
+		"Ability11"		"special_bonus_memethrow_jmishenko_7"  //Мины активируются сразу
+		"Ability12"		"special_bonus_memethrow_jmishenko_2" 	// +2 сек бана
+		"Ability13"		"special_bonus_memethrow_jmishenko_3"	// +150 урона от противопехотных мин
+		"Ability14"		"special_bonus_memethrow_jmishenko"	// +5 сек донбасса
+		"Ability15"		"special_bonus_memethrow_jmishenko_5"	// Мины наносят чистый урон
+		"Ability16"		"special_bonus_memethrow_jmishenko_8"		// 100% сопротивления под гимном 
+		"Ability17"		"special_bonus_memethrow_jmishenko_4"	// Неограниченое кол-во мин
+		"DisableWearables"		"0"
+		"ArmorPhysical"		"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"36"
+		"AttackRate"		"1.700000"
+		"BaseAttackSpeed"		"100"
+		"AttackAnimationPoint"		"0.330000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
+		"AttributeBaseStrength"		"24"
+		"AttributeStrengthGain"		"3.100000"
+		"AttributeBaseAgility"		"15"
+		"AttributeAgilityGain"		"2.400000"
+		"AttributeBaseIntelligence"		"18"
+		"AttributeIntelligenceGain"		"2.100000"
+		"MovementSpeed"		"320"
+		"MovementTurnRate"		"0.600000"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"precache"
+		{
+			"model"		"models/heroes/rattletrap/rattletrap_cog.vmdl"
+		}
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_rattletrap.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_rattletrap"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_rattletrap.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_rattletrap/clock_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"armor"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"misc"
+				"SlotText"		"#LoadoutSlot_Clockwerk_Rocket"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"400"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"ability2"
+				"SlotText"		"#LoadoutSlot_Clockwerk_Cogs"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_rattletrap_cog"
+				}
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+		}
+	}
+	// Van Darkholme
+	"npc_dota_hero_antimage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"			"models/heroes/antimage/antimage.vmdl"
+		"SoundSet"		"Hero_Antimage"
+		"IdleExpression"		"scenes/antimage/antimage_exp_idle_01.vcd"
+		"HeroID"		"1"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"1"
+		"Role"			"Carry,Escape,Nuker"
+		"Rolelevels"	"3,3,1"
+		"Complexity"	"1"
+		"Team"		"Good"
+		"ModelScale"		"1.00000"
+		"VersusScale"		"0.89"
+		"HeroGlowColor"		"120 64 148"
+		"PickSound"		"antimage_anti_spawn_01"
+		"BanSound"		"antimage_anti_anger_04"
+		"CMEnabled"		"1"
+		"NameAliases"		"am"
+		"workshop_guide_name"		"Anti-Mage"
+		"LastHitChallengeRival"		"npc_dota_hero_bounty_hunter"
+		"HeroSelectSoundEffect"		"Hero_Antimage.Pick"
+		"GibType"		"default"
+		"new_player_enable"		"1"
+		"DisableWearables"		"1"
+
+		// Abilities
+		//-------------------------------------------------------------------------------------------------------------
+		"Ability1"		"van_cumshot"
+		"Ability2"		"van_slap"
+		"Ability3"		"van_three_hundred_backs"
+		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"van_fisting"
+		"Ability10"		"special_bonus_memethrow_van_2" // 15% замедления камшота
+		"Ability11"		"special_bonus_memethrow_van_3" // +1 сек замедления от камшота
+		"Ability12"		"special_bonus_memethrow_van" // + 200 урона от камшота
+		"Ability13"		"special_bonus_memethrow_van_6" // +75 урона шлепка
+		"Ability14"		"special_bonus_memethrow_van_5" //	шлепок министан
+		"Ability15"		"special_bonus_all_stats_15"
+		"Ability16"		"special_bonus_memethrow_van_7"	 // шлепок чистый урон
+		"Ability17"		"special_bonus_memethrow_van_4"  // шлепок наносит крит 200%
+
+		// Armor
+		//-------------------------------------------------------------------------------------------------------------
+		"ArmorPhysical"		"0"
+
+		// Attack
+		//-------------------------------------------------------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"29"
+		"AttackDamageMax"		"33"
+		"AttackRate"		"1.300000"
+		"AttackAnimationPoint"		"0.300000"
+		"AttackAcquisitionRange"		"600"
+		"AttackRange"		"150"
+		"ProjectileSpeed"		"0"
+		"AttackSpeedActivityModifiers"
+		{
+			"fast"		"180"
+			"faster"	"300"
+		}
+
+		// Attributes
+		//-------------------------------------------------------------------------------------------------------------
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"23"
+		"AttributeStrengthGain"		"2.100000"
+		"AttributeBaseIntelligence"		"16"
+		"AttributeIntelligenceGain"		"2.000000"
+		"AttributeBaseAgility"		"23"
+		"AttributeAgilityGain"		"2.3"
+		"StatusHealthRegen"		"0.25"
+
+		// Movement
+		//-------------------------------------------------------------------------------------------------------------
+		"MovementSpeed"		"310"
+		"MovementTurnRate"		"0.500000"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"particle_folder"		"particles/units/heroes/hero_antimage"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_antimage.vsndevts"
+
+		// Additional data needed to render the out of game portrait
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_antimage/antimage_loadout.vpcf"		"loadout"
+			}
+		}
+
+		// Items
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"offhand_weapon"
+				"SlotText"		"#LoadoutSlot_Offhand_Weapon"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"armor"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"8"
+			{
+				"SlotIndex"		"8"
+				"SlotName"		"weapon_persona_1"
+				"SlotText"		"#LoadoutSlot_Weapon_Antimage_Persona"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"9"
+			{
+				"SlotIndex"		"9"
+				"SlotName"		"offhand_weapon_persona_1"
+				"SlotText"		"#LoadoutSlot_Offhand_Weapon_Antimage_Persona"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"10"
+			{
+				"SlotIndex"		"10"
+				"SlotName"		"head_persona_1"
+				"SlotText"		"#LoadoutSlot_Head_Antimage_Persona"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"11"
+			{
+				"SlotIndex"		"11"
+				"SlotName"		"armor_persona_1"
+				"SlotText"		"#LoadoutSlot_Armor_Antimage_Persona"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"12"
+			{
+				"SlotIndex"		"12"
+				"SlotName"		"taunt_persona_1"
+				"SlotText"		"#LoadoutSlot_Taunt_Antimage_Persona"
+				"DisplayInLoadout" "1"
+			}
+			// NOTE: PERSONAL SELECTOR MUST BE LAST!
+			"13"
+			{
+				"SlotIndex"		"13"
+				"SlotName"		"persona_selector"
+				"SlotText"		"#LoadoutSlot_Persona_Selector"
+			}	
+		}
+		"Bot"
+		{
+			"HeroType"		"DOTA_BOT_HARD_CARRY"
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"		"2"
+				"ProvidesBabysit"		"0"
+				"SurvivalRating"		"2"
+				"RequiresFarm"		"2"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"1"
+			}
+		}
+	}
+	// Dart Vader Дарт Вейдер
+	"npc_dota_hero_shadow_demon"
+	{
+		"Model"                  "models/heroes/hero_vaider/vader.vmdl"
+		"IdleExpression"		"scenes/shadow_demon/shadow_demon_exp_idle_01.vcd"
+		"SoundSet"		"Hero_ShadowDemon"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Carry"
+		"Rolelevels"	"2,2,1,1"
+		"Complexity"	"2"
+		"Team"		"Bad"
+		"HeroID"		"79"
+		"ModelScale"		"1.840000"
+		"LoadoutScale"		"0.770000"
+		"VersusScale"		"0.720000"
+		"SpectatorLoadoutScale" "0.76"
+		"HeroGlowColor"		"242 200 198"
+		"NameAliases"		"sd"
+		"CMEnabled"		"1"
+		"new_player_enable"		"1"
+		"PickSound"		"shadow_demon_shadow_demon_spawn_01"
+		"BanSound"		"shadow_demon_shadow_demon_anger_03"
+		"workshop_guide_name"		"Shadow Demon"
+		"LastHitChallengeRival"		"npc_dota_hero_bane"
+		"HeroSelectSoundEffect"		"Hero_ShadowDemon.Pick"
+		"DisableWearables"			"1"
+		"GibType"		"ethereal"
+		"GibTintColor"	"148 68 121 255"
+		"Ability1"		"dart_vader_sword"
+		"Ability2"		"vader_revenge"
+		"Ability3"		"vader_on_your_knees"
+		"Ability4"		"vader_star_of_the_death"
+		"Ability5"		"generic_hidden"
+		"Ability6"		"vader_gasp"
+		"Ability10"		"special_bonus_movement_speed_20"
+		"Ability11"		"special_bonus_memethrow_vader_5"	// +90 урона притягивания
+		"Ability12"		"special_bonus_memethrow_vader" // +1 сек мисов меча
+		"Ability13"		"special_bonus_memethrow_vader_6" // + 17% урона от мести
+		"Ability14"		"special_bonus_memethrow_vader_7"	// +50 урона ульты
+		"Ability15"		"special_bonus_memethrow_vader_3" // 8 сек длительности
+		"Ability16"		"special_bonus_memethrow_vader_2" // меч даёт сайленс
+		"Ability17"		"special_bonus_memethrow_vader_4"	// +10% кражи силы
+
+		"AbilityDraftAbilities"
+		{
+			"Ability1"		"shadow_demon_disruption"
+			"Ability2"		"shadow_demon_soul_catcher"
+			"Ability3"		"shadow_demon_demonic_purge"
+		}		
+
+		"ArmorPhysical"		"0"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"		"34"
+		"AttackDamageMax"		"38"
+		"AttackRate"		"1.700000"
+		"AttackAnimationPoint"		"0.350000"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"150"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
+		"AttributeBaseStrength"		"18"
+		"AttributeStrengthGain"		"2.40000"
+		"AttributeBaseAgility"		"22"
+		"AttributeAgilityGain"		"2.600000"
+		"AttributeBaseIntelligence"		"23"
+		"AttributeIntelligenceGain"		"2.400000"
+		"MovementSpeed"		"300"
+		"MovementTurnRate"		"0.600000"
+		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
+		"particle_folder"		"particles/units/heroes/hero_shadow_demon"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_shadow_demon.vsndevts"
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_shadow_demon/shadow_demon_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"weapon"
+				"SlotText"		"#LoadoutSlot_Weapon"
+				"DisplayInLoadout" "0"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"armor"
+				"SlotText"		"#LoadoutSlot_Armor"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"tail"
+				"SlotText"		"#LoadoutSlot_Tail"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"200"
+				"MaxPolygonsLOD1"		"800"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"ambient_effects"
+				"SlotText"		"#LoadoutSlot_Ambient_Effects"
+				"DisplayInLoadout"		"0"
+			}
+		}
+		"Bot"
+		{
+			"HeroType"		"DOTA_BOT_STUN_SUPPORT | DOTA_BOT_GANKER"
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"2"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"2"
+				"RequiresSetup"		"0"
+			}
+		}
+	}
+	// Piano пианино
+	"npc_dota_hero_invoker"
+	{
+		"Model"		"models/heroes/invoker/invoker.vmdl"
+		"IdleExpression"		"scenes/invoker/invoker_exp_idle_01.vcd"
+		"Persona"
+		{
+			"1"
+			{
+				"name"					"npc_dota_hero_invoker_persona1"
+				"Model"					"models/heroes/invoker_kid/invoker_kid.vmdl"	// For tools only
+			}
+		}
+		"SoundSet"		"Hero_Invoker"
+		"IdleSoundLoop"		"Hero_Invoker.IdleLoop"
+		"Enabled"		"1"
+		"HeroUnlockOrder"		"3"
+		"Role"			"Carry,Nuker,Disabler,Escape,Pusher"
+		"Rolelevels"	"1,3,2,1,1"
+		"Complexity"	"3"
+		"Team"		"Bad"
+		"HeroID"		"74"
+		"ModelScale"		"0.740000"
+		"LoadoutScale"		"0.800000"
+		"CMEnabled"		"1"
+		"PickSound"		"invoker_invo_spawn_02"
+		"BanSound"		"invoker_invo_anger_04"
+		"workshop_guide_name"		"Invoker"
+		"LastHitChallengeRival"		"npc_dota_hero_lina"
+		"ARDMDisabled"		"1"
+		"HeroSelectSoundEffect"		"Hero_Invoker.Pick"
+		"GibType"		"default"
+		"Ability1"		"quas_datadriven"
+		"Ability2"		"wex_datadriven"
+		"Ability3"		"exort_datadriven"
+		"Ability4"		"invoker_empty1_datadriven"
+		"Ability5"		"invoker_empty2_datadriven"
+		"Ability6"		"invoke_datadriven"
+		"Ability7"		"cold_snap_datadriven" // da
+		"Ability8"		"ghost_walk_datadriven" // da
+		"Ability9"		"tornado_datadriven" // да
+		"Ability10"		"emp_datadriven" // да
+		"Ability11"		"alacrity_datadriven" //da
+		"Ability12"		"chaos_meteor_datadriven"
+		"Ability13"		"sun_strike_datadriven" // да
+		"Ability14"		"forge_spirit_datadriven" // да
+		"Ability15"		"ice_wall_datadriven" // да
+		"Ability16"		"deafening_blast_datadriven"	// да	
+		
+		"AbilityDraftIgnoreCount" "16"
+		"AbilityTalentStart" "17"
+
+		"Ability17"		"special_bonus_intelligence_15"
+		"Ability18"		"special_bonus_cast_range_75"
+		"Ability19"		"special_bonus_armor_5"
+		"Ability20"		"special_bonus_movement_speed_20"
+		"Ability21"		"special_bonus_attack_speed_30"
+		"Ability22"		"special_bonus_spell_amplify_15"
+		"Ability23"		"special_bonus_cooldown_reduction_20"
+		"Ability24"		"special_bonus_attack_damage_60"
+		"StatusMana"				"350"
+		"AbilityDraftDisabled"		"0"
+		"ArmorPhysical"		"1"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"		"32"
+		"AttackDamageMax"		"36"
+		"AttackRate"		"1.600000"
+		"AttackAnimationPoint"		"0.400000"
+		"AttackAcquisitionRange"		"800"
+		"AttackRange"		"600"
+		"ProjectileModel"		"particles/units/heroes/hero_invoker/invoker_base_attack.vpcf"
+		"ProjectileSpeed"		"900"
+		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
+		"AttributeBaseStrength"		"18"
+		"AttributeStrengthGain"		"2.400000"
+		"AttributeBaseAgility"		"15"
+		"AttributeAgilityGain"		"2.100000"
+		"AttributeBaseIntelligence"		"17"
+		"AttributeIntelligenceGain"		"4.600000"
+		"MovementSpeed"		"280"
+		"MovementTurnRate"		"0.500000"
+		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_invoker.vsndevts"
+		"particle_folder"		"particles/units/heroes/hero_invoker"
+		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+		"precache"
+		{
+			"model"		"models/heroes/invoker/forge_spirit.vmdl"
+		}
+		"RenderablePortrait"
+		{
+			"Particles"
+			{
+				"particles/units/heroes/hero_invoker_kid/invoker_kid_loadout.vpcf"		"loadout"
+			}
+		}
+		"ItemSlots"
+		{
+			"0"
+			{
+				"SlotIndex"		"0"
+				"SlotName"		"head"
+				"SlotText"		"#LoadoutSlot_Head_Accessory"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
+			}
+			"1"
+			{
+				"SlotIndex"		"1"
+				"SlotName"		"shoulder"
+				"SlotText"		"#LoadoutSlot_Shoulder"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
+			}
+			"2"
+			{
+				"SlotIndex"		"2"
+				"SlotName"		"body_head"
+				"SlotText"		"#LoadoutSlot_Head"
+				"DisplayInLoadout" "0"
+			}
+			"3"
+			{
+				"SlotIndex"		"3"
+				"SlotName"		"back"
+				"SlotText"		"#LoadoutSlot_Back"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3500"
+				"MaxPolygonsLOD1"		"1400"
+			}
+			"4"
+			{
+				"SlotIndex"		"4"
+				"SlotName"		"arms"
+				"SlotText"		"#LoadoutSlot_Arms"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"5"
+			{
+				"SlotIndex"		"5"
+				"SlotName"		"summon"
+				"SlotText"		"#LoadoutSlot_Invoker_ForgeSpirit"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1800"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_invoker_forged_spirit"
+				}
+			}
+			"6"
+			{
+				"SlotIndex"		"6"
+				"SlotName"		"belt"
+				"SlotText"		"#LoadoutSlot_Belt"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
+			}
+			"7"
+			{
+				"SlotIndex"		"7"
+				"SlotName"		"taunt"
+				"SlotText"		"#LoadoutSlot_Taunt"
+			}
+
+			"10"
+			{
+				"SlotIndex"		"10"
+				"SlotName"		"head_persona_1"
+				"SlotText"		"#LoadoutSlot_Head_Invoker_Kid"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"500"
+			}
+			"11"
+			{
+				"SlotIndex"		"11"
+				"SlotName"		"shoulder_persona_1"
+				"SlotText"		"#LoadoutSlot_Shoulder_Invoker_Kid"
+				"TextureWidth"		"512"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"650"
+			}
+			"12"
+			{
+				"SlotIndex"		"12"
+				"SlotName"		"back_persona_1"
+				"SlotText"		"#LoadoutSlot_Back_Invoker_Kid"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"650"
+				"MaxPolygonsLOD1"		"650"
+			}
+			"13"
+			{
+				"SlotIndex"		"13"
+				"SlotName"		"arms_persona_1"
+				"SlotText"		"#LoadoutSlot_Arms_Invoker_Kid"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"800"
+				"MaxPolygonsLOD1"		"600"
+			}
+			"14"
+			{
+				"SlotIndex"		"14"
+				"SlotName"		"summon_persona_1"
+				"SlotText"		"#LoadoutSlot_Invoker_ForgeSpirit_Invoker_Kid"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"1800"
+				"MaxPolygonsLOD1"		"1800"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_invoker_forged_spirit"
+				}
+			}
+			"15"
+			{
+				"SlotIndex"		"15"
+				"SlotName"		"armor_persona_1"
+				"SlotText"		"#LoadoutSlot_Armor_Invoker_Kid"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"760"
+				"MaxPolygonsLOD1"		"760"
+			}
+			"16"
+			{
+				"SlotIndex"		"16"
+				"SlotName"		"taunt_persona_1"
+				"SlotText"		"#LoadoutSlot_Taunt_Invoker_Kid"
+			}
+
+			// NOTE: PERSONAL SELECTOR MUST BE LAST!
+			"18"
+			{
+				"SlotIndex"		"18"
+				"SlotName"		"persona_selector"
+				"SlotText"		"#LoadoutSlot_Persona_Selector"
+			}
+		}
+	}
+	"Beggar ball"
+	{
+		"override_hero"	"npc_dota_hero_void_spirit"
+		"Ability1"	"soccer_call_police" // Call to the police
+		"Ability2"	"soccer_drop_bottle" // Drop urine bottle 
+		"Ability3"	"soccer_provocation" // Resistance to negative effects
+		"Ability4"	"" 
+		"Ability5"	""
+		"Ability6"	"soccer_ball" // Become soccer ball
+		"DisableWearables"	"1"
+	}
+}
