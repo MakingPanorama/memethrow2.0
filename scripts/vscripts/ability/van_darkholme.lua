@@ -211,6 +211,7 @@ function van_three_hundred_backs:OnSpellStart( bDamage, istealGold )
 	local boolDamage = bDamage
 	boolDamage = tostring(bDamage) == "nil" and true or bDamage
 	local gold = istealGold or self:GetSpecialValueFor('gold')
+	self:GetCaster():EmitSound('Sound300backs')
 	if target:IsRealHero() then
 		if target:GetGold() >= gold then
 			target:SpendGold(gold, RandomInt(0, 1))
