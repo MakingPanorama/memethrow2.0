@@ -198,7 +198,7 @@ end
 LinkLuaModifier('modifier_on_gamahiro', 'ability/naruto', LUA_MODIFIER_MOTION_NONE)
 gamahiro_sit = class({})
 
-function gamahiro_sit:GetCustomCastErrorTarget(hTarget)
+function gamahiro_sit:CastFilterResultTarget(hTarget)
 	if hTarget then
 		if hTarget:IsIllusion() then
 			return UF_FAIL_ILLUSION
